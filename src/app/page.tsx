@@ -102,7 +102,7 @@
 //   );
 // }
 "use client";
-
+// homepage, ví dụ danh sách user (tuỳ bạn)
 import { useEffect, useState } from "react";
 
 interface User {
