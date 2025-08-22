@@ -31,7 +31,12 @@ export default function TourDetailPage() {
         const res = await fetch(`http://localhost:4000/tours/${tourId}`);
         const data = await res.json();
         setTour(data);
-        setForm({ title: data.title, description: data.description, price: data.price.toString(), location: data.location });
+        setForm({
+        title: data.title || "",
+        description: data.description || "",
+        price: data.price ? data.price.toString() : "",
+        location: data.location || "",
+      });
       } catch (err) { console.error(err); }
       finally { setLoading(false); }
     };
