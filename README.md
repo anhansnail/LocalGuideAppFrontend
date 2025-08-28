@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+## Multi lang
+
+
+```bash
+# Cài thư viện
+# Để thêm đa ngôn ngữ (i18n) cho Next.js 13+ App Router, cách gọn nhất hiện nay là dùng next-intl (thay vì next-i18next cũ, khá nặng).
+#Mình sẽ hướng dẫn bạn setup từng bước + code mẫu ngay cho Header + HeroSection để có nút đổi ngôn ngữ (VN/EN).
+npm install next-intl
+```

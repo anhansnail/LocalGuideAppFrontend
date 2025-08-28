@@ -103,33 +103,66 @@
 // }
 "use client";
 // homepage, ví dụ danh sách user (tuỳ bạn)
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-interface User {
-  id: number;
-  email: string;
-}
+// interface User {
+//   id: number;
+//   email: string;
+// }
+
+// export default function HomePage() {
+//   const [users, setUsers] = useState<User[]>([]);
+
+//   useEffect(() => {
+//     fetch("http://localhost:4000/users")
+//       .then((res) => res.json())
+//       .then((data) => setUsers(data))
+//       .catch((err) => console.error("Error fetching users:", err));
+//   }, []);
+
+//   return (
+//     <main className="p-6">
+//       <h1 className="text-2xl font-bold mb-4">Danh sách Users</h1>
+//       <ul className="space-y-2">
+//         {users.map((user) => (
+//           <li key={user.id} className="border p-2 rounded">
+//             {user.email}
+//           </li>
+//         ))}
+//       </ul>
+//     </main>
+//   );
+// }
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+import ValuePropsSection from "./components/ValuePropsSection";
+import DestinationsSection from "./components/DestinationsSection";
+import GuidesSection from "./components/GuidesSection";
+import ShoreExcursionsSection from "./components/ShoreExcursionsSection";
+import TrustMetricsSection from "./components/TrustMetricsSection";
+import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  const [users, setUsers] = useState<User[]>([]);
-
-  useEffect(() => {
-    fetch("http://localhost:4000/users")
-      .then((res) => res.json())
-      .then((data) => setUsers(data))
-      .catch((err) => console.error("Error fetching users:", err));
-  }, []);
+    // const t = useTranslations("home"); // ✅ khai báo hook ở đây
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Danh sách Users</h1>
-      <ul className="space-y-2">
-        {users.map((user) => (
-          <li key={user.id} className="border p-2 rounded">
-            {user.email}
-          </li>
-        ))}
-      </ul>
+    <main>
+      <Header />
+      <div className="pt-20"> {/* tránh bị header che */}
+      {/* <HeroSection 
+        title={t("title") as string} 
+        subtitle={t("subtitle") as string} 
+        searchLabel={t("search") as string} 
+      /> */}
+        <HeroSection/>
+        <ValuePropsSection />
+        <DestinationsSection />
+        <GuidesSection />
+        <ShoreExcursionsSection />
+        <TrustMetricsSection />
+      </div>
+      <Footer />
     </main>
   );
 }

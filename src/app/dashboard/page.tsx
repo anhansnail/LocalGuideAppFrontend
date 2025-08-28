@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { apiFetch } from "@/lib/api";
 
 export default function DashboardPage() {
   const router = useRouter();
   const [profile, setProfile] = useState<any>(null);
 
-  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null; // TODO: lấy token từ cookies / localStorage client side
 
   useEffect(() => {
     if (!token) { router.push("/login"); return; }

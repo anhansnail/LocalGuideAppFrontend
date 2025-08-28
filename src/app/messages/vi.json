@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "tours": "Tour",
+    "guides": "Hướng dẫn viên",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "login": "Đăng nhập"
+  },
+  "hero": {
+    "title": "Hãy chọn hành trình thân thiện hơn",
+    "subtitle": "Khám phá tour riêng tư cùng hướng dẫn viên địa phương đáng tin cậy",
+    "search": "Tìm kiếm"
+  },
+  "footer": {
+    "about": "Khám phá tour riêng tư với hướng dẫn viên địa phương đáng tin cậy.",
+    "links": "Liên kết nhanh",
+    "support": "Hỗ trợ",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "title": "Đi theo con đường thân thiện hơn",
+    "subtitle": "Khám phá các tour riêng với hướng dẫn viên địa phương đáng tin cậy",
+    "search": "Tìm kiếm"
+  }
+}

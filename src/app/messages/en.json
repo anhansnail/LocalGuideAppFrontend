@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "tours": "Tours",
+    "guides": "Guides",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "Take a Friendlier Route",
+    "subtitle": "Discover private tours with trusted local guides",
+    "search": "Search"
+  },
+  "footer": {
+    "about": "Discover private tours with trusted local guides.",
+    "links": "Quick Links",
+    "support": "Support",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Take a Friendlier Route",
+    "subtitle": "Discover private tours with trusted local guides",
+    "search": "Search"
+  }
+  
+}
