@@ -8,6 +8,8 @@ export default function HeroSection() {
   const [location, setLocation] = useState("");
   const [date, setDate] = useState<Date | null>(null);
   const [category, setCategory] = useState("");
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [endDate, setEndDate] = useState<Date | null>(null);
 
   const categories = [
     { icon: "🏥", label: "Health Buddy" },
@@ -15,6 +17,13 @@ export default function HeroSection() {
     { icon: "🍹", label: "Local Buddy" },
     { icon: "📷", label: "Photo Buddy" },
   ];
+
+
+  const handleDateChange = (dates: [Date | null, Date | null]) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
 
   const handleSearch = () => {
     console.log({ location, date, category });
@@ -48,11 +57,15 @@ export default function HeroSection() {
             />
 
             <DatePicker
-              selected={date}
-              onChange={(d) => setDate(d)}
-              placeholderText="Select date..."
+              selected={startDate}
+              onChange={handleDateChange}
+              startDate={startDate}
+              endDate={endDate}
+              selectsRange
+              placeholderText="Select travel dates"
               className="w-full px-4 py-3 border rounded-lg outline-none"
-            />
+              minDate={new Date()} // ✅ chỉ cho chọn từ hôm nay
+           />
           </div>
 
           {/* categories */}
