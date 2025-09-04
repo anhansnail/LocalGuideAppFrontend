@@ -27,3 +27,23 @@ body {
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+/* React Datepicker custom style giống react-select */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  font-size: 15px;
+  color: #111827; /* text-gray-900 */
+  outline: none;
+  transition: all 0.2s;
+}
+
+.react-datepicker__input-container input:focus {
+  border-color: #10b981; /* emerald-500 */
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}

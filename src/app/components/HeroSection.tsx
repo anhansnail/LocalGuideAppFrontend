@@ -3,6 +3,7 @@
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import LocationSelect from "./LocationSelect";
 
 export default function HeroSection() {
   const [location, setLocation] = useState("");
@@ -48,14 +49,17 @@ export default function HeroSection() {
         <div className="bg-white text-black rounded-2xl shadow-xl p-6 space-y-4">
           {/* location + date */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input
+            {/* <input
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               placeholder="Select a location"
               className="w-full px-4 py-3 border rounded-lg outline-none"
-            />
+            /> */}
+{/* Location select */}
+          <LocationSelect onChange={(val) => setLocation(val)} />
 
+          {/* ... DatePickers, category select, button ... */}
             <DatePicker
               selected={startDate}
               onChange={handleDateChange}
