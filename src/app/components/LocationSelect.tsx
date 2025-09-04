@@ -23,6 +23,7 @@ export default function LocationSelect({
 
   return (
     <Select
+      instanceId="location-select"
       options={options}
       placeholder="Select a location"
       onChange={(option) => onChange(option ? (option as Option).label : "")}
