@@ -49,4 +49,9 @@ body {
 }
 .react-select__control {
   height: -webkit-fill-available;
+  border-radius: .5rem !important;
+  border-color: #d1d5db !important; /* gray-300 */
+}
+.css-13cymwt-control {
+    border-color: #d1d5db !important; /* gray-300 */
 }

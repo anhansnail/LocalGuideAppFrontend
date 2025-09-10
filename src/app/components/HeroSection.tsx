@@ -14,6 +14,7 @@ export default function HeroSection() {
 
   const categories = [
     { icon: "🏥", label: "Health Buddy" },
+    { icon: "🚘", label: "Trasfer Buddy" },
     { icon: "👔", label: "Business Buddy" },
     { icon: "🍹", label: "Local Buddy" },
     { icon: "📷", label: "Photo Buddy" },
